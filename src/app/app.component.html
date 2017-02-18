@@ -1,0 +1,17 @@
+<h1>
+  {{title}}
+
+  <ul>
+
+    <li *ngFor="let item of items | async">
+        {{item.$value}}
+    </li>
+  </ul>
+</h1>
+<div>
+
+
+  <button md-button (click)="onClick()" [class.state1]="state.state1" [class.state2]="state.state2" [class.state3]="state.state3">Flat button</button>
+
+<button md-button [disabled]='loadingSample'>play</button>
+</div>
