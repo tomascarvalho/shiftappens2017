@@ -15,17 +15,17 @@ export class AppComponent {
     state3: false,
   }
 
-  items: FirebaseListObservable<any[]>;
+  //items: FirebaseListObservable<any[]>;
 
   constructor(private af: AngularFire, public service: Service){
-    this.items=af.database.list('/items');
+    //this.items=af.database.list('/synth');
     this.service.loadSound();
 
   }
   value= 1;
   onClick(){
 
-    if(this.value+1==4){
+    if(this.value>3){
       this.value = 1;
     }
     else{

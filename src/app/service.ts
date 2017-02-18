@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { AngularFire, FirebaseListObservable} from 'angularfire2';
 
 @Injectable()
 export class Service {
@@ -24,11 +25,11 @@ export class Service {
   loadSound(){
 
 
-    this.snare.src = "http://localhost:4200/samples/snare2.wav";
+    this.snare.src = "https://firebasestorage.googleapis.com/v0/b/my-test-project-d924c.appspot.com/o/snare.mp3?alt=media&token=595bb6aa-a50a-4141-bddd-dd07a2fd88fe";
     this.snare.load();
-    this.hihat.src = "http://localhost:4200/samples/hihat2.wav";
+    this.hihat.src = "https://firebasestorage.googleapis.com/v0/b/my-test-project-d924c.appspot.com/o/hihat.wav?alt=media&token=e92991d8-51a1-4d75-ab4d-84168a2b70e4";
     this.hihat.load();
-    this.cchord.src = "http://localhost:4200/samples/cchord.wav";
+    this.cchord.src = "https://firebasestorage.googleapis.com/v0/b/my-test-project-d924c.appspot.com/o/cchord.wav?alt=media&token=77491960-501d-4270-b2a5-061fc795b5b6";
     this.cchord.load();
     setInterval(() => this.playSound(),500);
     setInterval(() => this.playSound2(),1000);
